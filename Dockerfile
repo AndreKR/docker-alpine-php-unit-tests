@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk update
 RUN apk upgrade
-RUN apk add nodejs-lts openssh-client git php5-cli mysql-client postgresql-client mc php5-mysql php5-pgsql php5-curl bash php5-phar php5-json php5-openssl
+RUN apk add nodejs-lts openssh-client git php5-cli mysql-client postgresql-client mc php5-mysql php5-pgsql php5-curl bash php5-phar php5-json php5-openssl php5-dom
 RUN ln -sf /bin/bash /bin/sh
 RUN apk update --repository http://dl-3.alpinelinux.org/alpine/edge/community/
 RUN apk add php5-xdebug --repository http://dl-3.alpinelinux.org/alpine/edge/community/
