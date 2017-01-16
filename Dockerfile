@@ -6,6 +6,7 @@ RUN apk add nodejs-lts openssh-client git php5-cli mysql-client postgresql-clien
 RUN ln -sf /bin/bash /bin/sh
 RUN apk update --repository http://dl-3.alpinelinux.org/alpine/edge/community/
 RUN apk add php5-xdebug --repository http://dl-3.alpinelinux.org/alpine/edge/community/
+RUN echo "zend_extension=xdebug.so" > /etc/php5/conf.d/xdebug.ini
 RUN mv /etc/php5/conf.d/xdebug.ini /etc/php5/conf.d/xdebug.ini-off
 RUN echo -e "\nerror_reporting = E_ALL & ~E_NOTICE | E_STRICT" >> /etc/php5/conf.d/99-error-reporting.ini
 RUN mkdir -p /root/.config/mc
